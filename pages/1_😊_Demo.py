@@ -11,8 +11,9 @@ options = list(leafmap.basemaps.keys())
 
 with col2: 
     dropdown = st.selectbox("Basemap",options)
+    default_url=leafmap.basemaps[dropdown].tiles
     #dropdown = st.selectbox("Basemap",["HYBRID","ROADMAP","TERRAIN","SATELLITE"])
-    url = st.text_input("Enter Url")
+    url = st.text_input("Enter Url", default_url)
 
 m = leafmap.Map()
 m.add_basemap(dropdown)
