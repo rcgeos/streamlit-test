@@ -13,7 +13,7 @@ with col2:
 m = leafmap.Map()
 m.add_basemap(dropdown)
 if url: 
-    m.add_tile_layer(url, name='Tile Layer', attribution='')    # m.add_basemap('HYBRID')
+    m.add_tile_layer(url, name='Tile Layer', attribution='Base map available')    # m.add_basemap('HYBRID')
 
 with col1: 
    m.to_streamlit() # this should be the last line 
